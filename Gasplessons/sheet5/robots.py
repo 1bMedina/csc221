@@ -92,7 +92,7 @@ class Robot:
     def place(self):
         self.x = randint(RobotsGame.LEFT_EDGE, RobotsGame.RIGHT_EDGE)
         self.y = randint(RobotsGame.BOTTOM_EDGE, RobotsGame.TOP_EDGE)
-        self.shape = Box((10 * self.x, 10 * self.y), 10, 10)
+        self.shape = Box((10 * self.x, 10 * self.y), 10, 10, filled=True, color="Red")
 
     def move(self, player):
         if self.x < player.x:
@@ -100,10 +100,19 @@ class Robot:
         elif self.x > player.x:
             self.x -= 1
 
+
         if self.y < player.y:
             self.y += 1
         elif self.y > player.y:
             self.y -= 1
+        
+        if self.y == player.y and self.x == player.x:
+            game.finished = True
+            print("Game Over")
+            time.sleep(2)
+
+
+        
 
         move_to(self.shape, (10 * self.x, 10 * self.y))
 
@@ -112,5 +121,6 @@ game = RobotsGame()
 
 while not game.finished:
     game.next_move()
-
+   
 game.over()
+
