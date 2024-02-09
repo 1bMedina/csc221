@@ -2,7 +2,7 @@
 
 ## HTML - Part One
 - HTML is used to make the DOM
-- HTML uses tags to show text (ex. <p>)
+- HTML uses tags to show text (ex. <>)
 - HTML was invented in the early 1990s
 - Browsers used to be extremly flexible when it comes to HTML
 - You must follow the syntax rules in newer HTML
