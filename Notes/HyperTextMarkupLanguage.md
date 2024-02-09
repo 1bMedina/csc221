@@ -23,7 +23,7 @@
 - The developer tools shows the DOM not the raw code
 - The browser respects spaces when using the pre tag
 - The pre tag also prints everything in monospace font
-- There is space that the <p> tag has already made
+- There is space that the paragraph tag has already made
 - To make a link open in a new tag you can do target="_blank"
 - Tables are no longer used
 - The DOM is prettier
